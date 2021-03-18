@@ -13,9 +13,26 @@ instructions for your platform.
 
 To install the chart with the release name `my-storm`:
 
+*NOTE*: Ignore the following, it's out of date.
+
 ```bash
 $ helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator
 $ helm install --name my-storm incubator/storm
+```
+
+Use this:
+
+```bash
+helm repo add gresearch https://g-research.github.io/charts/
+helm install my-storm gresearch/storm --version 1.0.6
+```
+
+See https://artifacthub.io/packages/helm/gresearch/storm, click on the "INSTALL" link.
+
+Also note that if you wanted to pull the original source out of the repo and untar it:
+
+```bash
+helm pull gresearch/storm --version 1.0.6 --untar
 ```
 
 ## Configuration
